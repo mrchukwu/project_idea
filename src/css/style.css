@@ -1,0 +1,243 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* UTILITY STYLES */
+a {
+  text-decoration: none;
+  color: #000000;
+}
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  /* Main colors */
+  --primary-color: #14b789;
+  --seconary-color: #1eaf92;
+  --bg-color-white: #ffffff;
+  --bg-color-black: #3a3a3a;
+  --dark-gray-color-main: #252525;
+
+  /* Text */
+  --text-color: var(--dark-gray-color-main);
+  --tahoma-font-family: tahoma, sans-serif;
+
+  /* Padding */
+  --padding-all-large: 40px;
+  --padding-all-medium: 20px;
+  --padding-all-small: 10px;
+  --padding-tb-lr: 10px 20px;
+}
+
+main {
+  color: var(--text-color);
+  font-family: var(--tahoma-font-family);
+}
+
+/*****************GROUP STYLES Starts Here***********/
+.navbar,
+.navbar-links-container,
+.navbar-links-container ul,
+.hero-container {
+  display: flex;
+}
+
+.navbar,
+.navbar-links-container,
+.navbar-links-container ul .hero-container {
+  align-items: center;
+}
+
+/*Group style ends here */
+
+/********** NAVBAR ***************/
+.navbar {
+  background-color: #ffffff;
+  justify-content: space-between;
+
+  width: 900px;
+  margin: 0px auto 40px;
+  padding: var(--padding-tb-lr);
+  /* border: 1px solid #000000; */
+  /* border-style: solid;
+  border-color: red;
+  border-width: 10px ; */
+  border-radius: 12px;
+}
+
+.navbar-links-container,
+.navbar-links-container ul {
+  gap: 10px;
+}
+
+.navbar-links-container ul {
+  font-size: 12px;
+}
+
+.navbar-links-container ul li a:hover {
+  color: var(--seconary-color);
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--seconary-color);
+  transition: all 0.1s ease-in-out;
+}
+
+.navbar-links-container {
+  gap: 60px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+.navbar-contact a {
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+.navbar-contact a:hover {
+  background-color: white;
+  color: green;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar ends */
+
+/****************Hero-section starts here*************************/
+.hero-section {
+  background-color: var(--primary-color);
+  padding: 50px 0px;
+}
+
+.hero-container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+/* Hero-container-left */
+.hero-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-container-left div {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 10px;
+}
+
+.hero-container-left div img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-container-left div p {
+  font-size: 35px;
+  font-weight: bold;
+  color: #2b2b2b;
+  background-color: var(--bg-color-white);
+  border-radius: 50px;
+}
+
+.hero-container-left p {
+  background-color: var(--bg-color-white);
+  border-radius: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: var(--padding-all-small);
+  margin: 10px 0;
+}
+
+.hero-container-left button {
+  background-color: #535da1;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: var(--padding-all-small);
+}
+
+/* Hero-container-right */
+.hero-container-right {
+  width: 50%;
+}
+.hero-container-right img {
+  width: 600px;
+}
+
+/* my-story-section starts here */
+.my-story-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: var(--padding-all-large);
+  margin: 40px auto;
+}
+
+.my-story-section section:first-child{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-story-section section:first-child img{
+  width: 500px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.my-story-section section:last-child{
+  width: 50%;
+}
+
+.my-story-section section:last-child div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--primary-color);
+  padding: var(--padding-all-small);
+  border-radius: 12px;
+  width: 600px
+}
+.my-story-section section:last-child div p{
+  color: var(--bg-color-white);
+  font-size: 50px;
+  font-weight: 600;;
+}
+
+.my-story-section section:last-child div img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.my-story-section section:last-child article h3{
+  font-size: 20px;
+}
+.my-story-section section:last-child article p{
+  padding: 10px 0;
+  color: rgb(126, 126, 126);
+  line-height: 1.5;
+}
